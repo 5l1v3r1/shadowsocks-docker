@@ -1,3 +1,4 @@
 FROM debian:latest
 
-RUN apt-get update -y && apt-get upgrade -y
+RUN apt-get update && apt-get upgrade && apt-get install -y \
+  python-pip
