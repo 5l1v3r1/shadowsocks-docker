@@ -8,4 +8,8 @@ RUN apt-get update && apt-get upgrade && apt-get install -y \
 
 RUN pip install https://github.com/shadowsocks/shadowsocks/archive/master.zip
 
+COPY local.conf /etc/sysctl.d/local.conf
+
+RUN sysctl --system
+
 ENTRYPOINT ["/usr/local/bin/ssserver"]
