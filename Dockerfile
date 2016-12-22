@@ -1,5 +1,7 @@
 FROM debian:latest
 
+MAINTAINER HKLCF <hklcfs@gmail.com>
+
 RUN apt-get update && apt-get upgrade && apt-get install -y \
   python-pip
 
